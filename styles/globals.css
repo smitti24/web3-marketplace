@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    body {
+        @apply bg-[#0F1318] min-h-screen text-gray-300;
+    }
+}
+
+@layer components {
+    .button-main {
+        align-items: center;
+        background: linear-gradient(86.62deg, #c643f4, #8b43f4 82.93%);
+        border-radius: 4px;
+        color: #fff;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        gap: 12px;
+        height: 32px;
+        line-height: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
