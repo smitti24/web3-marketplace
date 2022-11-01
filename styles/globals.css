@@ -10,6 +10,11 @@
 }
 
 @layer components {
+
+    .header-nav-item {
+        @apply hidden cursor-pointer md:inline-flex;
+    }
+
     .button-main {
         align-items: center;
         background: linear-gradient(86.62deg, #c643f4, #8b43f4 82.93%);
@@ -27,4 +32,10 @@
         padding-left: 16px;
         padding-right: 16px;
     }
+
+    .link {
+        @apply hover:text-white hover:font-bold cursor-pointer 
+    }
+
+
 }
