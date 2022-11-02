@@ -37,5 +37,8 @@
         @apply hover:text-white hover:font-bold cursor-pointer 
     }
 
+    .card {
+        @apply border border-[#282C34] rounded-md p-5 bg-[#282C34] cursor-pointer text-white font-bold
+    }
 
 }
