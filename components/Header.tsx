@@ -87,7 +87,7 @@ function Header({}: Props) {
         </button>
 
         <Link href="/create">
-          <button className="button-main hidden sm:inline px-5 py-2 hover:scale-110 duration-300">
+          <button className="button-main sm:inline px-5 py-2 hover:scale-110 duration-300">
             List Item
           </button>
         </Link>
