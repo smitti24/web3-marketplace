@@ -41,4 +41,12 @@
         @apply border border-[#282C34] rounded-md p-5 bg-[#282C34] cursor-pointer text-white font-bold
     }
 
+    .inputTransparent {
+        @apply bg-transparent flex-1 outline-none border p-2 text-white rounded-lg
+    }
+
+    .fileInput {
+        @apply block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+    }
+
 }

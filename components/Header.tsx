@@ -78,7 +78,7 @@ function Header({}: Props) {
           <input
             className="bg-transparent flex-1 outline-none"
             type="text"
-            placeholder="search for anuthing"
+            placeholder="search for anything"
           ></input>
         </div>
 

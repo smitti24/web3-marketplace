@@ -28,13 +28,13 @@ const Home: NextPage = () => {
 
                 <div className="pt-2 space-y-4">
                   <div>
-                    <h2 className="text-xl truncate">{listing.asset.name}</h2>
+                    <h2 className="text-xl truncate">{listing?.asset.name}</h2>
                     <hr />
                     <p className="truncate text-sm text-gray-400">{listing.asset.description}</p>
                   </div>
 
                   <p>
-                    <span className="font-bold mr-1">{listing.buyoutCurrencyValuePerToken.displayValue}</span>{listing.buyoutCurrencyValuePerToken.symbol}
+                    <span className="font-bold mr-1">{listing?.buyoutCurrencyValuePerToken.displayValue}</span>{listing.buyoutCurrencyValuePerToken.symbol}
                   </p>
 
                   <div className={`flex items-center space-x-1 justify-end text-xs w-fit ml-auto p-2 rounded-lg ${listing.type === ListingType.Direct ? "bg-[#c643f4]" : "bg-[#3b0050]"}`}>
