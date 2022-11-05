@@ -30,7 +30,7 @@ function Create({}: Props) {
     "nft-collection"
   );
 
-  const ownderNfts = useOwnedNFTs(collectionContract, address);
+  const ownedNfts = useOwnedNFTs(collectionContract, address);
   const [selectedNft, setSelectedNft] = useState<NFT>();
   const networkMismatch = useNetworkMismatch();
   const [, switchNetwork] = useNetwork();
@@ -47,7 +47,6 @@ function Create({}: Props) {
   } = useCreateAuctionListing(contract);
 
   const handleCreateListing = async (e: FormEvent<HTMLFormElement>) => {
-    console.log("HERE")
     e.preventDefault();
 
     // Make sure user is on the right network, else prompt to switch
@@ -123,7 +122,7 @@ function Create({}: Props) {
         />
 
         <div className="flex overflow-x-scroll space-x-2 p-4">
-          {ownderNfts?.data?.map((nft) => (
+          {ownedNfts?.data?.map((nft) => (
             <div
               key={nft.metadata.id}
               className={`flex flex-col space-y-2 card min-w-fit max-w-xs ${
