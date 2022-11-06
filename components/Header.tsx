@@ -32,13 +32,13 @@ function Header({}: Props) {
             </button>
           )}
 
-          <p className="header-nav-item">Daily Deals</p>
-          <p className="header-nav-item">Help & Contact</p>
+          <p className="header-nav-item cursor-not-allowed">Daily Deals</p>
+          <p className="header-nav-item cursor-not-allowed">Help & Contact</p>
         </div>
         <div className="flex items-center space-x-4 text-sm">
-          <p className="header-nav-item">Ship To</p>
-          <p className="header-nav-item">Sell</p>
-          <Link className="flex items-center hover:link" href="/addItem">
+          <p className="header-nav-item cursor-not-allowed">Ship To</p>
+          <p className="header-nav-item cursor-not-allowed">Sell</p>
+          <Link className="flex items-center hover:link cursor-not-allowed" href="/addItem">
             Watchlist
             <ChevronDownIcon className="px-2 h-4"></ChevronDownIcon>
           </Link>
@@ -68,7 +68,7 @@ function Header({}: Props) {
           </Link>
         </div>
 
-        <button className="hidden lg:flex items-center space-x-2 w-20 hover:link">
+        <button className="cursor-not-allowed hidden lg:flex items-center space-x-2 w-20 hover:link ">
           <p className="text-sm">Shop by Category</p>
           <ChevronDownIcon className="h-4 flex-shrink-0" />
         </button>
@@ -76,13 +76,14 @@ function Header({}: Props) {
         <div className="flex items-center space-x-2 px-2 md:px-5 py-2 border-white border-2 flex-1">
           <MagnifyingGlassIcon className="w-5 text-gray-400" />
           <input
+          disabled
             className="bg-transparent flex-1 outline-none"
             type="text"
             placeholder="search for anything"
           ></input>
         </div>
 
-        <button className="button-main hidden sm:inline px-5 py-2 hover:scale-110 duration-300">
+        <button className="button-main hidden sm:inline px-5 py-2 hover:scale-110 duration-300 cursor-not-allowed" title="coming soon!">
           Search
         </button>
 

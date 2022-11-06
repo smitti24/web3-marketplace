@@ -92,7 +92,7 @@ function ListingPage() {
     if (listing.type === ListingType.Auction) {
         if (!minimumNextBid) return 'Enter Bid Amout';
 
-        return Number(minimumNextBid.displayValue) === 0 ? "Enter bid amount" : `${minimumNextBid.displayValue} ${minimumNextBid.displayValue} or more..`
+        return Number(minimumNextBid.displayValue) === 0 ? "Enter bid amount" : `${minimumNextBid.displayValue} ${minimumNextBid.symbol} or more..`
     }
   }
 
@@ -223,7 +223,7 @@ function ListingPage() {
                 </button>
               </div>          
             </div>
-            <div className="grid grid-cols-3 items-center py-4">
+            {/* <div className="grid grid-cols-3 items-center py-4">
             {listing.type === ListingType.Direct && offers && (
                 <>
                     <p className="font-bold text-1xl pb-3">Offers:</p>
@@ -265,14 +265,14 @@ function ListingPage() {
                     ))}
                 </>
             )}
-            </div>
+            </div> */}
             <div className="grid grid-cols-2 items-center py-4">
                 {listing.type === ListingType.Direct ? (
                     <>
-                        <p className="col-span-2 font-bold text-2xl pb-3">Make an offer</p>
-                        <input className="inputTransparent w-44" type="text" placeholder={formatPlaceholder()} onChange={(e) => setOfferAmount(e.target.value)}></input>
+                        <p className="col-span-2 font-bold text-2xl pb-3">Make an offer (Coming Soon!)</p>
+                        <input disabled className="inputTransparent w-44 cursor-not-allowed" type="text" placeholder={formatPlaceholder()} onChange={(e) => setOfferAmount(e.target.value)}></input>
                         <div className="col-start-2 text-right justify-center">
-                            <button onClick={createBidOrOffer} className="col-start-2 mt-2 text-center button-main hover:scale-110 duration-300">
+                            <button disabled={true} onClick={createBidOrOffer} className="bg-slate-600 cursor-not-allowed col-start-2 mt-2 text-center button-main hover:scale-110 duration-300 ">
                                 Make offer now
                             </button>
                         </div> 
@@ -291,7 +291,7 @@ function ListingPage() {
                             date={Number(listing.endTimeInEpochSeconds.toString()) * 1000} 
                         /> 
 
-                        <input className="inputTransparent w-20 md:w-44 mt-4" type="text" placeholder={formatPlaceholder()} onChange={e => setBidAmount(e.target.value)}></input>
+                        <input className="inputTransparent w-20 md:w-52 mt-4" type="text" placeholder={formatPlaceholder()} onChange={e => setBidAmount(e.target.value)}></input>
                         <div className="col-start-2 text-right justify-center mt-2">
                             <button onClick={createBidOrOffer} className="col-start-2 mt-2 text-center button-main hover:scale-110 duration-300">
                                 Place Bid
