@@ -4,6 +4,7 @@ import { useAddress, useContract } from "@thirdweb-dev/react";
 import placeholderImage from "../public/images/addItemPlaceholderImage.png";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import CommonBodyHeading from "../components/CommonBodyHeading";
 
 type Props = {};
 
@@ -59,13 +60,9 @@ function addItem({}: Props) {
     <div>
       <Header />
 
-      <main className="max-w-6xl 6 mx-auto p-10 border ">
-        <h1 className="text-4xl font-bold">Add an Item to the Marketplace</h1>
-        <h2 className="text-xl font-semibold pt-5">Item Details</h2>
-        <p className="pb-5">
-          By adding an item to the marketplace, you're essentially Minting an
-          NFT of the item into your wallet which we can then list for sale!
-        </p>
+      <main className="max-w-6xl mx-auto p-10 border ">
+        <CommonBodyHeading heading="Add an Item to the Marketplace" subheading="Item Details" description="By adding an item to the marketplace, you're essentially Minting an
+          NFT of the item into your wallet which we can then list for sale!"/>
         <div className="flex flex-col justify-center items-center md:flex-row md:space-x-5">
           <Image
             src={preview || placeholderImage}

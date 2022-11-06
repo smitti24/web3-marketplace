@@ -125,7 +125,7 @@ function Create({}: Props) {
           {ownedNfts?.data?.map((nft) => (
             <div
               key={nft.metadata.id}
-              className={`flex flex-col space-y-2 card min-w-fit max-w-xs ${
+              className={`flex flex-col space-y-2 card max-w-[240px] ${
                 nft.metadata.id === selectedNft?.metadata.id && "selectedCard"
               }`}
               onClick={() => setSelectedNft(nft)}
@@ -135,7 +135,7 @@ function Create({}: Props) {
                 src={nft.metadata.image}
               />
               <p className="text-lg truncate font-bold">{nft.metadata.name}</p>
-              <p className="text-md truncate">{nft.metadata.description}</p>
+              <p className="text-md ">{nft.metadata.description}</p>
             </div>
           ))}
         </div>
@@ -168,6 +168,7 @@ function Create({}: Props) {
                   Price
                 </label>
                 <input
+                required
                   className="inputTransparent"
                   type="text"
                   placeholder="0.05 GOR"
