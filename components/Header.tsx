@@ -96,18 +96,18 @@ function Header({}: Props) {
       <hr className="mt-2"></hr>
 
       <section className="flex justify-center space-x-6 items-center px-6 py-5 whitespace-nowrap">
-        <p>Home</p>
-        <p>Electronics</p>
-        <p>Computers</p>
-        <p>Video Games</p>
-        <p className="link hidden sm:inline">Home & Garden</p>
-        <p className="link hidden sm:inline">Home & Beauty</p>
-        <p className="link hidden md:inline">Colectibles and Art</p>
-        <p className="link hidden lg:inline">Books</p>
-        <p className="link hidden lg:inline">Music</p>
-        <p className="link hidden lg:inline">Deals</p>
-        <p className="link hidden xl:inline">Other</p>
-        <p className="link">More</p>
+        <Link className="link" href="/">Home</Link>
+        <p className="cursor-not-allowed" title="Coming soon!">Electronics</p>
+        <p className="cursor-not-allowed" title="Coming soon!">Computers</p>
+        <p className="cursor-not-allowed" title="Coming soon!">Video Games</p>
+        <p className="hidden sm:inline cursor-not-allowed" title="Coming soon!">Home & Garden</p>
+        <p className="hidden sm:inline cursor-not-allowed" title="Coming soon!">Home & Beauty</p>
+        <p className="hidden md:inline cursor-not-allowed" title="Coming soon!">Colectibles and Art</p>
+        <p className="hidden lg:inline cursor-not-allowed" title="Coming soon!">Books</p>
+        <p className="hidden lg:inline cursor-not-allowed" title="Coming soon!">Music</p>
+        <p className="hidden lg:inline cursor-not-allowed" title="Coming soon!">Deals</p>
+        <p className="hidden xl:inline cursor-not-allowed" title="Coming soon!">Other</p>
+        <p className="">More</p>
       </section>
     </div>
   );
