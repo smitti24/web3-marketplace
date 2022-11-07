@@ -13,6 +13,7 @@ function addItem({}: Props) {
   const router = useRouter();
     const [preview, setPreview ] = useState<string>();
     const [image, setImage ] = useState<File>();
+    const [isMinting, setIsMinting ] = useState<boolean>();
 
   const { contract } = useContract(
     process.env.NEXT_PUBLIC_COLLECTION_CONTRACT,
@@ -41,17 +42,21 @@ function addItem({}: Props) {
     }
 
     try {
-        const tx = await contract.mintTo(address, metadata);
+        setIsMinting(true);
+        await contract.mintTo(address, metadata).then((tx) => {
+          const reciept = tx.receipt;
+          const id = tx.id;
+          const nft = tx.data;
+  
+          console.log(reciept, id, nft);
+  
+          router.push("/");
+        }).finally(() => setIsMinting(false));
 
-        const reciept = tx.receipt;
-        const id = tx.id;
-        const nft = tx.data;
-
-        console.log(reciept, id, nft);
-
-        router.push("/");
+        
 
     } catch (error) {
+        setIsMinting(false)
         console.error(error);
     }
   }
@@ -106,7 +111,7 @@ function addItem({}: Props) {
 
             <div className="flex w-full items-center justify-center">
               <button type="submit" className="button-main py-4 px-10">
-                Add/Mint Item
+                {isMinting ? 'Minting NFT..' : 'Add/Mint Item' }
               </button>
             </div>
           </form>

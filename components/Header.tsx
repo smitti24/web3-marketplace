@@ -38,7 +38,7 @@ function Header({}: Props) {
         <div className="flex items-center space-x-4 text-sm">
           <p className="header-nav-item cursor-not-allowed">Ship To</p>
           <p className="header-nav-item cursor-not-allowed">Sell</p>
-          <Link className="flex items-center hover:link cursor-not-allowed" href="/addItem">
+          <Link className="hidden md:flex items-center sm:inline hover:link cursor-not-allowed" href="/addItem">
             Watchlist
             <ChevronDownIcon className="px-2 h-4"></ChevronDownIcon>
           </Link>
@@ -96,11 +96,11 @@ function Header({}: Props) {
 
       <hr className="mt-2"></hr>
 
-      <section className="flex justify-center space-x-6 items-center px-6 py-5 whitespace-nowrap">
+      <section className="flex justify-center space-x-6 items-center m-auto px-6 py-5 whitespace-nowrap">
         <Link className="link" href="/">Home</Link>
         <p className="cursor-not-allowed" title="Coming soon!">Electronics</p>
         <p className="cursor-not-allowed" title="Coming soon!">Computers</p>
-        <p className="cursor-not-allowed" title="Coming soon!">Video Games</p>
+        <p className="hidden cursor-not-allowed sm:inline" title="Coming soon!">Video Games</p>
         <p className="hidden sm:inline cursor-not-allowed" title="Coming soon!">Home & Garden</p>
         <p className="hidden sm:inline cursor-not-allowed" title="Coming soon!">Home & Beauty</p>
         <p className="hidden md:inline cursor-not-allowed" title="Coming soon!">Colectibles and Art</p>

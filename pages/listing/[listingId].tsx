@@ -143,7 +143,7 @@ function ListingPage() {
             await makeOffer({
                 listingId: listingId,
                 quantity: 1,
-                pricePerToken: offerAmount
+                pricePerToken: 0.000002
             }, {
                 onSuccess(data, variables, context) {
                     alert('CONGRATS, You made an Offer!!');
